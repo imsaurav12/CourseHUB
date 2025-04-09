@@ -15,7 +15,11 @@ const Filter = (props) => {
           <button 
           onClick={() => filterHandler(data.title)}
           className={`text-lg px-2 py-1 rounded-md font-medium
-          text-white bg-black hover:bg-opacity-50 border-2 transition-all duration-300`}
+          text-white bg-black hover:bg-opacity-50 border-2 transition-all duration-300
+          ${category === data.title 
+          ? "bg-opacity-60 border-red-500" 
+          : "bg-opacity-40 border-transparent"}
+          `}
           key ={data.id}>{data.title}</button>
         ))
       }

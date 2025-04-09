@@ -34,9 +34,9 @@ const Card = (props) => {
       <div className="relative">
         <img src={course.image.url}></img>
 
-      <div className="w-[40px] h-[40px] bg-white rounded-full absolute right-2 bottom-3
+      <div className="w-[40px] h-[40px] bg-white rounded-full absolute right-2 bottom-[-12px]
       grid place-items-center">
-        <button onClick={clickHandler}>
+        <button onClick={clickHandler} >
           {
             likedCourses.includes(course.id) ?
             (<FcLikePlaceholder fontSize="1.75rem" />):
@@ -49,7 +49,12 @@ const Card = (props) => {
       </div>
       <div>
         <p className="p-2 text-white font-semibold text-lg leading-6">{course.title}</p>
-        <p className="mt-2 text-white p-2">{course.description}</p>
+        <p className="mt-2 text-white p-2">
+          {
+            course.description.length > 100 ? 
+            `${course.description.substring(0,100)}...`:
+            course.description
+          }</p>
       </div>
       
     </div>
