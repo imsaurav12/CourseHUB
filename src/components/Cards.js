@@ -7,16 +7,22 @@ const Cards = (props) => {
   // console.log('Printing Data')
   // console.log(courses);
   const [likedCourses, setLikedCourses] = useState([]);
+  let category = props.category;
 
   function getCourses(){
     if (!courses) return [];
-    let allCourses = [];
+    if(category === "All"){
+      let allCourses = [];
     Object.values(courses).forEach(arrayEl => {
       arrayEl.forEach(courseData => {
         allCourses.push(courseData);
       })
     })
     return allCourses;
+    }
+    else{
+      return courses[category];
+    }
   }
    
   return (
@@ -24,7 +30,7 @@ const Cards = (props) => {
       getCourses().map((course)=>(
         <Card key={course.id} 
         course = {course} likedCourses = {likedCourses} setLikedCourses = {setLikedCourses} />
-      ))}
+      ))} 
     </div>
   )
 }
