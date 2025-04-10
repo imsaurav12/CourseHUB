@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/imsaurav12/CourseHUB.git/static/css/main.0ea88a01.css",
+    "main.js": "/imsaurav12/CourseHUB.git/static/js/main.97f3d2c7.js",
+    "index.html": "/imsaurav12/CourseHUB.git/index.html",
+    "main.0ea88a01.css.map": "/imsaurav12/CourseHUB.git/static/css/main.0ea88a01.css.map",
+    "main.97f3d2c7.js.map": "/imsaurav12/CourseHUB.git/static/js/main.97f3d2c7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ea88a01.css",
+    "static/js/main.97f3d2c7.js"
+  ]
+}
